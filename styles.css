@@ -60,6 +60,85 @@ body {
   margin-bottom: 8px;
 }
 
+/* Day Filter */
+.day-filter-card {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  max-width: 95vw;
+}
+
+.filter-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.days-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.day-btn {
+  min-width: 60px;
+  padding: 8px 12px;
+  border: 2px solid var(--border);
+  background: var(--card);
+  color: var(--foreground);
+  border-radius: calc(var(--radius) * 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.day-btn:hover {
+  background: var(--muted);
+  border-color: var(--primary);
+}
+
+.day-btn.active {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+}
+
+.day-btn:active {
+  transform: scale(0.95);
+}
+
+.day-short {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .day-full {
+    display: none;
+  }
+  
+  .day-short {
+    display: inline;
+  }
+  
+  .day-btn {
+    min-width: 50px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
 #share-container {
   position: fixed;
   bottom: 24px;

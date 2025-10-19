@@ -9,11 +9,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
-    <link href="/styles.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
 </head>
 
 <body>
     <div id="map" role="application" aria-label="Mapa interativo com locais de distribuição de comida"></div>
+    
+    <!-- Filtro de dias -->
+    <div id="day-filter" class="day-filter-card">
+        <p class="filter-label">Filtrar por dia da semana:</p>
+        <div class="days-container">
+            <button class="day-btn active" data-day="todos" aria-pressed="true">
+                <span class="day-full">Todos os dias</span>
+                <span class="day-short">Todos</span>
+            </button>
+            <button class="day-btn" data-day="dom" aria-pressed="false">
+                <span class="day-full">Domingo</span>
+                <span class="day-short">Dom</span>
+            </button>
+            <button class="day-btn" data-day="seg" aria-pressed="false">
+                <span class="day-full">Segunda</span>
+                <span class="day-short">Seg</span>
+            </button>
+            <button class="day-btn" data-day="ter" aria-pressed="false">
+                <span class="day-full">Terça</span>
+                <span class="day-short">Ter</span>
+            </button>
+            <button class="day-btn" data-day="qua" aria-pressed="false">
+                <span class="day-full">Quarta</span>
+                <span class="day-short">Qua</span>
+            </button>
+            <button class="day-btn" data-day="qui" aria-pressed="false">
+                <span class="day-full">Quinta</span>
+                <span class="day-short">Qui</span>
+            </button>
+            <button class="day-btn" data-day="sex" aria-pressed="false">
+                <span class="day-full">Sexta</span>
+                <span class="day-short">Sex</span>
+            </button>
+            <button class="day-btn" data-day="sab" aria-pressed="false">
+                <span class="day-full">Sábado</span>
+                <span class="day-short">Sáb</span>
+            </button>
+        </div>
+    </div>
     
     <div id="share-container">
         <div id="share-panel" class="share-panel hidden">
@@ -58,7 +97,7 @@
     <div id="toast-container"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-    <script src="/app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

@@ -2,12 +2,15 @@
 
 Este projeto é uma página web interativa que mostra locais que oferecem **refeições gratuitas** para pessoas em situação de rua na cidade do Rio de Janeiro (região central - Lapa, Centro e Glória). 
 
+**Site totalmente em HTML, CSS e JavaScript puro - sem frameworks!**
+
 ## 🎯 Funcionalidades
 
 ### Mapa Interativo
 - **Mapa interativo** construído com [Leaflet](https://leafletjs.com) mostrando marcadores nos endereços dos pontos de distribuição de comida (cozinhas solidárias, projetos sociais, etc.)
 - Clique nos marcadores para ver nome do local, endereço e horários de atendimento
 - Navegação fluida com zoom e pan, otimizado para dispositivos móveis
+- **Filtro por dia da semana** para encontrar locais abertos em dias específicos
 
 ### Sistema de Compartilhamento
 - **Fácil compartilhamento** da página através de um botão flutuante
@@ -20,6 +23,22 @@ Este projeto é uma página web interativa que mostra locais que oferecem **refe
 - Uso de emojis e ícones para facilitar a compreensão
 - Cores quentes e acolhedoras que transmitem solidariedade
 - Texto claro e legível, acessível para pessoas com diferentes níveis de alfabetização
+
+## 🚀 Como usar
+
+Basta abrir o arquivo `index.html` em qualquer navegador web moderno. Não requer instalação de dependências ou servidor web.
+
+Para servir localmente com um servidor HTTP simples:
+
+```bash
+# Usando Python 3
+python -m http.server 5000
+
+# Usando Node.js (http-server)
+npx http-server -p 5000
+
+# Ou apenas abra o arquivo diretamente no navegador
+```
 
 ## 📍 Locais Mapeados
 
@@ -74,7 +93,7 @@ A página está hospedada e pode ser acessada diretamente pelo navegador. Basta 
 
 - **HTML5** - Estrutura semântica da página
 - **CSS3** - Estilização customizada e responsiva
-- **JavaScript** - Lógica da aplicação (sem frameworks)
+- **JavaScript Puro (Vanilla JS)** - Lógica da aplicação (sem frameworks!)
 - **Leaflet.js** - Biblioteca JavaScript de mapas interativos de código aberto
 - **OpenStreetMap** - Fornecimento dos dados do mapa de fundo (© OpenStreetMap contributors)
 - **Web Share API** - API nativa do navegador para compartilhamento
@@ -84,7 +103,7 @@ A página está hospedada e pode ser acessada diretamente pelo navegador. Basta 
 
 ### Pré-requisitos
 - Um navegador web moderno (Chrome, Firefox, Safari, Edge)
-- Servidor HTTP local (opcional, para testar funcionalidades que precisam de protocolo HTTP)
+- Nenhuma instalação necessária!
 
 ### Instalação
 
@@ -94,32 +113,36 @@ git clone https://github.com/seu-usuario/mapa-solidario.git
 cd mapa-solidario
 ```
 
-2. Abra o arquivo `index.html` diretamente no navegador, ou use um servidor local:
+2. Abra o arquivo `index.html` diretamente no navegador!
+
+Ou use um servidor local (opcional):
 
 **Opção 1 - Servidor Python:**
 ```bash
-python -m http.server 8000
+python -m http.server 5000
 ```
 
 **Opção 2 - Servidor Node:**
 ```bash
-npx http-server
+npx http-server -p 5000
 ```
 
 **Opção 3 - Live Server (VS Code):**
 - Instale a extensão "Live Server"
 - Clique com o botão direito em `index.html` e selecione "Open with Live Server"
 
-3. Acesse no navegador (se usando servidor): `http://localhost:8000`
-
 ### Estrutura de Arquivos
 
 ```
 mapa-solidario/
-├── index.html    # Estrutura HTML principal
-├── styles.css    # Estilos CSS
-├── app.js        # Lógica JavaScript
-└── README.md     # Esta documentação
+├── index.html       # Estrutura HTML principal
+├── styles.css       # Estilos CSS personalizados
+├── app.js           # Lógica JavaScript (vanilla)
+├── package.json     # Metadados do projeto
+├── README.md        # Esta documentação
+├── PRD.md           # Documento de Requisitos do Produto
+├── SECURITY.md      # Política de Segurança
+└── LICENSE          # Licença MIT
 ```
 
 ## 🤝 Como Contribuir
