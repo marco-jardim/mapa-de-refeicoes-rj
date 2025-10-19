@@ -8,7 +8,7 @@ Um mapa interativo e solidário que conecta pessoas em situação de rua com pon
 3. **Prático** - Informações diretas e acionáveis com fácil compartilhamento para ampliar o alcance
 
 **Complexity Level**: Micro Tool (single-purpose)
-- O app é uma ferramenta focada com visualização de mapa interativo, marcadores estáticos e funcionalidade de compartilhamento social. Implementado em HTML, CSS e JavaScript puro (sem frameworks) para máxima compatibilidade, leveza e facilidade de manutenção.
+- O app é uma ferramenta focada com visualização de mapa interativo, marcadores estáticos e funcionalidade de compartilhamento social. Implementado em HTML, CSS e JavaScript puro (sem frameworks React ou outros) para máxima compatibilidade, leveza e facilidade de manutenção. Arquitetura simples com três arquivos principais: index.html, styles.css e app.js.
 
 ## Essential Features
 

@@ -72,21 +72,19 @@ A página está hospedada e pode ser acessada diretamente pelo navegador. Basta 
 
 ## 💻 Tecnologias Utilizadas
 
-- **React 19** - Framework JavaScript para construção da interface
-- **TypeScript** - Superset tipado do JavaScript para código mais robusto
+- **HTML5** - Estrutura semântica da página
+- **CSS3** - Estilização customizada e responsiva
+- **JavaScript** - Lógica da aplicação (sem frameworks)
 - **Leaflet.js** - Biblioteca JavaScript de mapas interativos de código aberto
 - **OpenStreetMap** - Fornecimento dos dados do mapa de fundo (© OpenStreetMap contributors)
-- **Tailwind CSS v4** - Framework CSS utilitário para estilização
-- **shadcn/ui** - Componentes de UI acessíveis e customizáveis
-- **Phosphor Icons** - Biblioteca de ícones para interface
-- **Vite** - Build tool e servidor de desenvolvimento rápido
 - **Web Share API** - API nativa do navegador para compartilhamento
+- **Phosphor Icons** - Ícones SVG inline para interface
 
 ## 🛠 Desenvolvimento Local
 
 ### Pré-requisitos
-- Node.js 18+ instalado
-- npm ou yarn
+- Um navegador web moderno (Chrome, Firefox, Safari, Edge)
+- Servidor HTTP local (opcional, para testar funcionalidades que precisam de protocolo HTTP)
 
 ### Instalação
 
@@ -96,27 +94,33 @@ git clone https://github.com/seu-usuario/mapa-solidario.git
 cd mapa-solidario
 ```
 
-2. Instale as dependências:
+2. Abra o arquivo `index.html` diretamente no navegador, ou use um servidor local:
+
+**Opção 1 - Servidor Python:**
 ```bash
-npm install
+python -m http.server 8000
 ```
 
-3. Inicie o servidor de desenvolvimento:
+**Opção 2 - Servidor Node:**
 ```bash
-npm run dev
+npx http-server
 ```
 
-4. Abra seu navegador em `http://localhost:5173`
+**Opção 3 - Live Server (VS Code):**
+- Instale a extensão "Live Server"
+- Clique com o botão direito em `index.html` e selecione "Open with Live Server"
 
-### Build para Produção
+3. Acesse no navegador (se usando servidor): `http://localhost:8000`
 
-Para criar uma versão otimizada para produção:
+### Estrutura de Arquivos
 
-```bash
-npm run build
 ```
-
-Os arquivos serão gerados na pasta `dist/`.
+mapa-solidario/
+├── index.html    # Estrutura HTML principal
+├── styles.css    # Estilos CSS
+├── app.js        # Lógica JavaScript
+└── README.md     # Esta documentação
+```
 
 ## 🤝 Como Contribuir
 
@@ -126,7 +130,7 @@ Contribuições são muito bem-vindas! Você pode ajudar de várias formas:
 Se você conhece outros pontos de distribuição de refeições:
 
 1. Faça um **Fork** do projeto
-2. Edite o arquivo `src/components/FoodMap.tsx`
+2. Edite o arquivo `app.js`
 3. Adicione o novo local no array `foodLocations` com:
    - Nome do local (com emoji apropriado)
    - Endereço completo
@@ -181,7 +185,7 @@ Este projeto é uma humilde contribuição para ampliar o alcance de informaçõ
 ### Comunidade Open Source
 - **OpenStreetMap** - Pela disponibilização de dados cartográficos abertos
 - **Leaflet** - Pela excelente biblioteca de mapas (BSD-2-Clause License)
-- **Comunidade React e TypeScript** - Por ferramentas incríveis de desenvolvimento
+- **Phosphor Icons** - Pelos ícones SVG utilizados na interface
 
 ## 📞 Contato
 
