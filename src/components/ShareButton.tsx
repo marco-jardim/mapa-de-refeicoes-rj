@@ -93,7 +93,7 @@ export function ShareButton() {
 
   return (
     <TooltipProvider>
-      <div className="fixed bottom-6 right-6 z-[2000] flex flex-col items-end gap-3">
+      <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-3">
         {showPanel && !navigator.share && (
           <Card className="p-3 shadow-2xl animate-in slide-in-from-right duration-250 backdrop-blur-sm bg-card/95">
             <div className="flex flex-col gap-2">
