@@ -7,8 +7,8 @@ Um mapa interativo e solidário que conecta pessoas em situação de rua com pon
 2. **Solidário** - Design caloroso e acolhedor que transmite empatia e apoio à causa social
 3. **Prático** - Informações diretas e acionáveis com fácil compartilhamento para ampliar o alcance
 
-**Complexity Level**: Light Application (multiple features with basic state)
-- O app combina visualização de mapa interativo, gerenciamento de marcadores e funcionalidade de compartilhamento social, mas sem necessidade de autenticação ou persistência de dados complexa.
+**Complexity Level**: Micro Tool (single-purpose)
+- O app é uma ferramenta focada com visualização de mapa interativo, marcadores estáticos e funcionalidade de compartilhamento social. Implementado em HTML, CSS e JavaScript puro (sem frameworks) para máxima compatibilidade, leveza e facilidade de manutenção.
 
 ## Essential Features
 
@@ -82,30 +82,32 @@ Animações sutis e propositais que guiam a atenção sem atrasar ou distrair, m
 ## Component Selection
 
 - **Components**: 
-  - Button (shadcn) - para botão principal de compartilhamento e ícones sociais, com variant="default" para primary e variant="ghost" para ícones
-  - Card (shadcn) - para painel de compartilhamento flutuante e possível header informativo
-  - Tooltip (shadcn) - para labels dos ícones sociais ao hover
-  - Sheet (shadcn) - alternativa mobile para painel de compartilhamento se necessário
+  - Botões nativos HTML com estilização CSS customizada para máxima compatibilidade
+  - Sistema de cards CSS puro para painel de compartilhamento flutuante
+  - Tooltips via atributos aria-label para acessibilidade
+  - Toasts customizados em JavaScript puro para notificações
 - **Customizations**: 
-  - Botão flutuante de compartilhar com position fixed e border-radius full
-  - Ícones do @phosphor-icons/react para redes sociais (FacebookLogo, XLogo, WhatsappLogo, TelegramLogo, InstagramLogo, TiktokLogo, ShareNetwork)
+  - Botão flutuante de compartilhar com position fixed e border-radius circular
+  - Ícones SVG inline para redes sociais (Facebook, X/Twitter, WhatsApp, Telegram, Instagram, TikTok, Compartilhar)
   - Container customizado para mapa Leaflet com height 100vh
+  - Sistema de toast notification personalizado para feedback de cópia
 - **States**: 
-  - Botão compartilhar: default (sombra suave), hover (escala 1.05 + sombra elevada), active (escala 0.95), loading (spinner para feedback de cópia)
-  - Ícones sociais: ghost por padrão, hover com background subtle, active com feedback visual
+  - Botão compartilhar: default (sombra suave), hover (escala 1.05 + sombra elevada), active (escala 0.95)
+  - Ícones sociais: transparente por padrão, hover com background subtle + cor da rede social, active com feedback visual
   - Popups do mapa: aberto/fechado controlado pelo Leaflet
+  - Toasts: animação de entrada (slide-in-down) e saída (fade-out)
 - **Icon Selection**: 
-  - ShareNetwork (Phosphor) para botão principal de compartilhamento
-  - Logos específicos de cada rede social (FacebookLogo, XLogo, WhatsappLogo, TelegramLogo, InstagramLogo, TiktokLogo)
-  - MapPin ou MapTrifold para possível header/título do app
+  - SVG Phosphor Icons inline para compartilhar e redes sociais
+  - Emojis nos marcadores e informações do mapa para máxima compatibilidade
 - **Spacing**: 
-  - Padding interno de cards/botões: p-4 (16px)
-  - Gap entre ícones sociais: gap-3 (12px)
-  - Margin do botão flutuante das bordas: m-4 (16px)
-  - Padding dos popups do mapa: personalizado via CSS do Leaflet
+  - Padding interno de cards/botões: 12-16px
+  - Gap entre ícones sociais: 8px
+  - Margin do botão flutuante das bordas: 24px desktop / 16px mobile
+  - Padding dos popups do mapa: 14px 16px
 - **Mobile**: 
-  - Botão de compartilhar reduz para 56px×56px (mantém 44px+ de área de toque)
-  - Painel de ícones em mobile vira drawer/sheet na base da tela (melhor alcance do polegar)
+  - Botão de compartilhar reduz para 48px×48px (mantém 44px+ de área de toque)
+  - Painel de ícones em mobile adapta grid (2 colunas para sociais, 3 para copiar)
   - Mapa ocupa 100% da viewport com controles do Leaflet adaptados para touch
-  - Font-sizes mantidos ou ligeiramente aumentados para legibilidade mobile
+  - Font-sizes mantidos para legibilidade mobile
+  - Toasts adaptam largura para mobile (calc(100vw - 32px))
   - Mobile-first design com breakpoint em 768px para adaptações desktop
