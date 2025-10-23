@@ -53,19 +53,6 @@ const foodLocations = [
     "lng": -43.179252
   },
   {
-    "name": "🥣 Projeto VOAR",
-    "address": "📌 Praça Nossa Senhora da Glória – Glória",
-    "hours": "🕐 Café da manhã por volta das 8h",
-    "days": "📅 Segunda, quarta e quinta-feiras",
-    "daysOfWeek": [
-      "seg",
-      "qua",
-      "qui"
-    ],
-    "lat": -22.920419, 
-    "lng": -43.175826
-  },
-  {
     "name": "🍲 Tenda Franciscana (SEFRAS)",
     "address": "📌 Visconde da Gávea, 136 – Gamboa",
     "hours": "🕐 Almoço aproximadamente 12h–13h",
