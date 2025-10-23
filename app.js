@@ -1,58 +1,189 @@
 // Dados dos locais de distribuição de comida
 const foodLocations = [
   {
-    name: '🍛 Cozinha Solidária da Lapa (MTST)',
-    address: '📌 Av. Mem de Sá, 25 – Lapa',
-    hours: '🕐 Almoço, doações 11h–18h',
-    days: '📅 Todos os dias (inclui fins de semana e feriados)',
-    daysOfWeek: ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab'],
-    lat: -22.9126,
-    lng: -43.1798
+    "name": "🍛 Cozinha Solidária da Lapa (MTST)",
+    "address": "📌 Av. Mem de Sá, 25 – Lapa",
+    "hours": "🕐 Almoço, doações 11h–18h",
+    "days": "📅 Todos os dias (inclui fins de semana e feriados)",
+    "daysOfWeek": [
+      "dom",
+      "seg",
+      "ter",
+      "qua",
+      "qui",
+      "sex",
+      "sab"
+    ],
+    "lat": -22.9126,
+    "lng": -43.1798
   },
   {
-    name: '🥣 Reviver Obras Sociais',
-    address: '📌 Rua Riachuelo, 19 – Lapa',
-    hours: '🕐 Noite (~20h)',
-    days: '📅 Sábados e feriados conforme demanda',
-    daysOfWeek: ['sab'],
-    lat: -22.9138,
-    lng: -43.1814
+    "name": "🥣 Reviver Obras Sociais",
+    "address": "📌 Rua Riachuelo, 19 – Lapa",
+    "hours": "🕐 Noite (~20h)",
+    "days": "📅 Sábados e feriados conforme demanda",
+    "daysOfWeek": [
+      "sab"
+    ],
+    "lat": -22.9138,
+    "lng": -43.1814
   },
   {
-    name: '🍽 Refettorio Gastromotiva',
-    address: '📌 Rua da Lapa, 108 – Lapa',
-    hours: '🕐 Almoço 11h30–15h / jantar social',
-    days: '📅 Segunda a sexta (não abre fds/feriado)',
-    daysOfWeek: ['seg', 'ter', 'qua', 'qui', 'sex'],
-    lat: -22.9159,
-    lng: -43.1776
+    "name": "🍽 Refettorio Gastromotiva",
+    "address": "📌 Rua da Lapa, 108 – Lapa",
+    "hours": "🕐 Almoço 11h30–15h / jantar social",
+    "days": "📅 Segunda a sexta (não abre fds/feriado)",
+    "daysOfWeek": [
+      "seg",
+      "ter",
+      "qua",
+      "qui",
+      "sex"
+    ],
+    "lat": -22.9159,
+    "lng": -43.1776
   },
   {
-    name: '🥣 Projeto VOAR',
-    address: '📌 Praça Nossa Senhora da Glória – Glória',
-    hours: '🕐 Café da manhã por volta das 8h',
-    days: '📅 Segunda, quarta e quinta-feiras',
-    daysOfWeek: ['seg', 'qua', 'qui'],
-    lat: -22.9214,
-    lng: -43.1753
+    "name": "🥣 Projeto VOAR",
+    "address": "📌 Praça Nossa Senhora da Glória – Glória",
+    "hours": "🕐 Café da manhã por volta das 8h",
+    "days": "📅 Segunda, quarta e quinta-feiras",
+    "daysOfWeek": [
+      "seg",
+      "qua",
+      "qui"
+    ],
+    "lat": -22.9214,
+    "lng": -43.1753
   },
   {
-    name: '🍲 Tenda Franciscana (SEFRAS)',
-    address: '📌 Largo da Carioca – Centro',
-    hours: '🕐 Almoço aproximadamente 12h–13h',
-    days: '📅 Dias úteis (segunda a sexta)',
-    daysOfWeek: ['seg', 'ter', 'qua', 'qui', 'sex'],
-    lat: -22.9090,
-    lng: -43.1760
+    "name": "🍲 Tenda Franciscana (SEFRAS)",
+    "address": "📌 Largo da Carioca – Centro",
+    "hours": "🕐 Almoço aproximadamente 12h–13h",
+    "days": "📅 Dias úteis (segunda a sexta)",
+    "daysOfWeek": [
+      "seg",
+      "ter",
+      "qua",
+      "qui",
+      "sex"
+    ],
+    "lat": -22.909,
+    "lng": -43.176
   },
   {
-    name: '🙏 Fraternidade na Rua (Fraternidade sem Fronteiras)',
-    address: '📌 Rua do Senado, 50 – Lapa',
-    hours: '🕐 Almoço por volta das 11h',
-    days: '📅 Segunda a sexta-feira',
-    daysOfWeek: ['seg', 'ter', 'qua', 'qui', 'sex'],
-    lat: -22.9110,
-    lng: -43.1800
+    "name": "🙏 Fraternidade na Rua (Fraternidade sem Fronteiras)",
+    "address": "📌 Rua do Senado, 50 – Lapa",
+    "hours": "🕐 Almoço por volta das 11h",
+    "days": "📅 Segunda a sexta-feira",
+    "daysOfWeek": [
+      "seg",
+      "ter",
+      "qua",
+      "qui",
+      "sex"
+    ],
+    "lat": -22.911,
+    "lng": -43.18
+  },
+  {
+    "name": "⛪ Catedral Metropolitana do Rio de Janeiro",
+    "address": "📌 Catedral Metropolitana do Rio de Janeiro",
+    "hours": "🕐 Café da manhã, 7h",
+    "days": "📅 Domingo",
+    "daysOfWeek": [
+      "dom"
+    ],
+    "lat": -22.910669,
+    "lng": -43.180798
+  },
+  {
+    "name": "🍞 Café da manhã do Hely (Peruquinha)",
+    "address": "📌 Avenida Presidente Antônio Carlos, 615 – Centro",
+    "hours": "🕐 Café da manhã às 7h; quarta-feira também almoço 15h30",
+    "days": "📅 Terça, quarta e sexta",
+    "daysOfWeek": [
+      "ter",
+      "qua",
+      "sex"
+    ],
+    "lat": -22.9077771,
+    "lng": -43.1729739
+  },
+  {
+    "name": "🍽 ACVM – Associação de Comunidades de Vida Mariana",
+    "address": "📌 Rua Bela, 795 – São Cristóvão",
+    "hours": "🕐 Almoço",
+    "days": "📅 Dias não especificados",
+    "daysOfWeek": [],
+    "lat": -22.90367,
+    "lng": -43.21879
+  },
+  {
+    "name": "🍛 Praça da Medalha Milagrosa",
+    "address": "📌 Praça da Medalha Milagrosa – São Cristóvão",
+    "hours": "🕐 Almoço",
+    "days": "📅 Sábado",
+    "daysOfWeek": [
+      "sab"
+    ],
+    "lat": -22.9133954,
+    "lng": -43.2007101
+  },
+  {
+    "name": "🥐 Café da manhã Projeto VOAR – Aterro do Flamengo",
+    "address": "📌 Aterro do Flamengo em frente à Rua Dois de Dezembro",
+    "hours": "🕐 Café da manhã, 7h30",
+    "days": "📅 Segunda",
+    "daysOfWeek": [
+      "seg"
+    ],
+    "lat": -22.92998,
+    "lng": -43.17586
+  },
+  {
+    "name": "🥐 Café da manhã Projeto VOAR – Praça São Salvador",
+    "address": "📌 Praça São Salvador – Laranjeiras",
+    "hours": "🕐 Café da manhã, 8h30",
+    "days": "📅 Quarta",
+    "daysOfWeek": [
+      "qua"
+    ],
+    "lat": -22.9339083,
+    "lng": -43.179838
+  },
+  {
+    "name": "🥐 Café da manhã Projeto VOAR – Praça Metrô da Glória",
+    "address": "📌 Praça do Metrô da Glória",
+    "hours": "🕐 Café da manhã",
+    "days": "📅 Quinta",
+    "daysOfWeek": [
+      "qui"
+    ],
+    "lat": -22.92065,
+    "lng": -43.17671
+  },
+  {
+    "name": "🍲 Dona Ana (Defensoria Pública)",
+    "address": "📌 Rua Uruguaiana, 174 – Centro",
+    "hours": "🕐 Distribuição às 17h",
+    "days": "📅 Segunda",
+    "daysOfWeek": [
+      "seg"
+    ],
+    "lat": -22.90419,
+    "lng": -43.18009
+  },
+  {
+    "name": "⛪ Paróquia Matriz de Nossa Senhora da Glória",
+    "address": "📌 Largo do Machado – Rio de Janeiro",
+    "hours": "🕐 Café da manhã, 8h30",
+    "days": "📅 Domingo",
+    "daysOfWeek": [
+      "dom"
+    ],
+    "lat": -22.931285,
+    "lng": -43.180438
   }
 ];
 
