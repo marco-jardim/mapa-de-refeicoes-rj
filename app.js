@@ -14,8 +14,8 @@ const foodLocations = [
       "sex",
       "sab"
     ],
-    "lat": -22.9126,
-    "lng": -43.1798
+    "lat": -22.9136512,
+    "lng": -43.1795218
   },
   {
     "name": "🥣 Reviver Obras Sociais",
@@ -25,8 +25,8 @@ const foodLocations = [
     "daysOfWeek": [
       "sab"
     ],
-    "lat": -22.9138,
-    "lng": -43.1814
+    "lat": -22.9138874,
+    "lng": -43.1809197
   },
   {
     "name": "🍽 Refettorio Gastromotiva",
@@ -40,8 +40,17 @@ const foodLocations = [
       "qui",
       "sex"
     ],
-    "lat": -22.9159,
-    "lng": -43.1776
+    "lat": -22.915677, 
+    "lng": -43.177751,
+  },
+  {
+    "name": "🍛 Missionárias da Caridade – Lapa",
+    "address": "📌 Travessa do Mosqueira – Lapa",
+    "hours": "🕐 Almoço 16h",
+    "days": "📅 Segunda a sexta",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex"],
+    "lat": -22.914208,
+    "lng": -43.179252
   },
   {
     "name": "🥣 Projeto VOAR",
@@ -53,12 +62,12 @@ const foodLocations = [
       "qua",
       "qui"
     ],
-    "lat": -22.9214,
-    "lng": -43.1753
+    "lat": -22.920419, 
+    "lng": -43.175826
   },
   {
     "name": "🍲 Tenda Franciscana (SEFRAS)",
-    "address": "📌 Largo da Carioca – Centro",
+    "address": "📌 Visconde da Gávea, 136 – Gamboa",
     "hours": "🕐 Almoço aproximadamente 12h–13h",
     "days": "📅 Dias úteis (segunda a sexta)",
     "daysOfWeek": [
@@ -68,11 +77,11 @@ const foodLocations = [
       "qui",
       "sex"
     ],
-    "lat": -22.909,
-    "lng": -43.176
+    "lat": -22.899720,
+    "lng": -43.190432
   },
   {
-    "name": "🙏 Fraternidade na Rua (Fraternidade sem Fronteiras)",
+    "name": "🙏 Cinquentinha - Fraternidade na Rua (Fraternidade sem Fronteiras)",
     "address": "📌 Rua do Senado, 50 – Lapa",
     "hours": "🕐 Almoço por volta das 11h",
     "days": "📅 Segunda a sexta-feira",
@@ -83,8 +92,8 @@ const foodLocations = [
       "qui",
       "sex"
     ],
-    "lat": -22.911,
-    "lng": -43.18
+    "lat": -22.909159,
+    "lng": -43.184191
   },
   {
     "name": "⛪ Catedral Metropolitana do Rio de Janeiro",
@@ -115,9 +124,9 @@ const foodLocations = [
     "address": "📌 Rua Bela, 795 – São Cristóvão",
     "hours": "🕐 Almoço",
     "days": "📅 Dias não especificados",
-    "daysOfWeek": [],
-    "lat": -22.90367,
-    "lng": -43.21879
+    "daysOfWeek": ["qua"],
+    "lat": -22.888759,
+    "lng": -43.224570
   },
   {
     "name": "🍛 Praça da Medalha Milagrosa",
@@ -127,8 +136,8 @@ const foodLocations = [
     "daysOfWeek": [
       "sab"
     ],
-    "lat": -22.9133954,
-    "lng": -43.2007101
+    "lat": -22.916256,
+    "lng": -43.212502
   },
   {
     "name": "🥐 Café da manhã Projeto VOAR – Aterro do Flamengo",
@@ -138,8 +147,8 @@ const foodLocations = [
     "daysOfWeek": [
       "seg"
     ],
-    "lat": -22.92998,
-    "lng": -43.17586
+    "lat": -22.930019,
+    "lng": -43.173957
   },
   {
     "name": "🥐 Café da manhã Projeto VOAR – Praça São Salvador",
@@ -171,8 +180,8 @@ const foodLocations = [
     "daysOfWeek": [
       "seg"
     ],
-    "lat": -22.90419,
-    "lng": -43.18009
+    "lat": -22.902301,
+    "lng": -43.181061
   },
   {
     "name": "⛪ Paróquia Matriz de Nossa Senhora da Glória",
