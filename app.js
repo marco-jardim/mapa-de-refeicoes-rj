@@ -1,24 +1,7 @@
 // Dados dos locais de distribuição de comida
-const foodLocations = [
+const foodLocations = [  
   {
-    "name": "🍛 Cozinha Solidária da Lapa (MTST)",
-    "address": "📌 Av. Mem de Sá, 25 – Lapa",
-    "hours": "🕐 Almoço, doações 11h–18h",
-    "days": "📅 Todos os dias (inclui fins de semana e feriados)",
-    "daysOfWeek": [
-      "dom",
-      "seg",
-      "ter",
-      "qua",
-      "qui",
-      "sex",
-      "sab"
-    ],
-    "lat": -22.9136512,
-    "lng": -43.1795218
-  },
-  {
-    "name": "🥣 Reviver Obras Sociais",
+    "name": "🥣 Reviver Obras Sociais - Igreja Batista Farol da Lapa",
     "address": "📌 Rua Riachuelo, 19 – Lapa",
     "hours": "🕐 Noite (~20h)",
     "days": "📅 Sábados e feriados conforme demanda",
@@ -372,9 +355,191 @@ function setupEventListeners() {
   });
 }
 
+function setupTooltips() {
+  const triggers = document.querySelectorAll('[data-tooltip]');
+  let activeTooltip = null;
+  let activeTrigger = null;
+  let hideTimer = null;
+  const coarsePointerQuery = window.matchMedia('(pointer: coarse)');
+
+  const clearTooltip = () => {
+    if (hideTimer) {
+      clearTimeout(hideTimer);
+      hideTimer = null;
+    }
+
+    if (activeTooltip && activeTooltip.parentNode) {
+      const tooltipToRemove = activeTooltip;
+      const trigger = activeTrigger;
+      tooltipToRemove.classList.remove('visible');
+      activeTooltip = null;
+      activeTrigger = null;
+
+      setTimeout(() => {
+        if (tooltipToRemove.parentNode) {
+          tooltipToRemove.parentNode.removeChild(tooltipToRemove);
+        }
+      }, 150);
+
+      if (trigger) {
+        trigger.removeAttribute('aria-describedby');
+      }
+    }
+  };
+
+  const scheduleHide = (delay = 0) => {
+    if (!activeTooltip) {
+      return;
+    }
+
+    if (hideTimer) {
+      clearTimeout(hideTimer);
+    }
+
+    if (delay <= 0) {
+      clearTooltip();
+    } else {
+      hideTimer = setTimeout(() => {
+        clearTooltip();
+      }, delay);
+    }
+  };
+
+  const showTooltip = (trigger) => {
+    const text = trigger.getAttribute('data-tooltip');
+    if (!text) {
+      return;
+    }
+
+    if (activeTrigger !== trigger) {
+      clearTooltip();
+    }
+
+    if (activeTrigger === trigger && activeTooltip) {
+      if (hideTimer) {
+        clearTimeout(hideTimer);
+        hideTimer = null;
+      }
+      return;
+    }
+
+    const bubble = document.createElement('div');
+    bubble.className = 'tooltip-bubble';
+    bubble.setAttribute('role', 'tooltip');
+    const tooltipId = `tooltip-${Date.now()}`;
+    bubble.id = tooltipId;
+    bubble.textContent = text;
+    trigger.appendChild(bubble);
+    trigger.setAttribute('aria-describedby', tooltipId);
+
+    requestAnimationFrame(() => {
+      bubble.classList.add('visible');
+      
+      // Ajustar posição para não extrapolar os limites da tela
+      const rect = bubble.getBoundingClientRect();
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      let arrowOffset = 0;
+      
+      // Verificar se extrapola à esquerda
+      if (rect.left < 8) {
+        const offset = 8 - rect.left;
+        arrowOffset = -offset;
+        bubble.style.left = `calc(50% + ${offset}px)`;
+        bubble.style.transform = `translate(-50%, 0)`;
+      }
+      
+      // Verificar se extrapola à direita
+      if (rect.right > viewportWidth - 8) {
+        const offset = rect.right - (viewportWidth - 8);
+        arrowOffset = offset;
+        bubble.style.left = `calc(50% - ${offset}px)`;
+        bubble.style.transform = `translate(-50%, 0)`;
+      }
+      
+      // Ajustar posição da seta (dente) do tooltip
+      if (arrowOffset !== 0) {
+        const arrow = document.createElement('style');
+        arrow.textContent = `#${tooltipId}::after { 
+          left: calc(50% + ${arrowOffset}px);
+        }`;
+        document.head.appendChild(arrow);
+      }
+      
+      // Verificar se extrapola no topo
+      if (rect.top < 8) {
+        bubble.style.bottom = 'auto';
+        bubble.style.top = 'calc(100% + 12px)';
+        bubble.style.transform = 'translate(-50%, 0)';
+        
+        // Inverter a seta para baixo
+        const arrowFlip = document.createElement('style');
+        arrowFlip.textContent = `#${tooltipId}::after { 
+          top: auto; 
+          bottom: 100%; 
+          border-color: transparent transparent rgba(33, 33, 33, 0.92) transparent;
+          ${arrowOffset !== 0 ? `left: calc(50% + ${arrowOffset}px);` : ''}
+        }`;
+        document.head.appendChild(arrowFlip);
+      }
+    });
+
+    activeTooltip = bubble;
+    activeTrigger = trigger;
+  };
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('pointerenter', (event) => {
+      if (event.pointerType === 'mouse') {
+        showTooltip(trigger);
+      }
+    });
+
+    trigger.addEventListener('pointerleave', (event) => {
+      if (event.pointerType === 'mouse') {
+        scheduleHide(0);
+      }
+    });
+
+    trigger.addEventListener('focus', () => {
+      showTooltip(trigger);
+    });
+
+    trigger.addEventListener('blur', () => {
+      scheduleHide(0);
+    });
+
+    trigger.addEventListener('touchstart', () => {
+      showTooltip(trigger);
+      scheduleHide(2200);
+    }, { passive: true });
+
+    trigger.addEventListener('click', (event) => {
+      if (coarsePointerQuery.matches) {
+        showTooltip(trigger);
+        scheduleHide(2200);
+        event.stopPropagation();
+      }
+    });
+  });
+
+  document.addEventListener('click', () => {
+    scheduleHide(0);
+  });
+
+  window.addEventListener('scroll', () => {
+    scheduleHide(0);
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    scheduleHide(0);
+  });
+}
+
 // Inicializar aplicação quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', () => {
   initMap();
   setupDayFilter();
   setupEventListeners();
+  setupTooltips();
 });

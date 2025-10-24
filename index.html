@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapa Solidário - Distribuição de Comida RJ</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -58,16 +59,16 @@
         <div id="share-panel" class="share-panel hidden">
             <div class="share-content">
                 <div class="social-grid">
-                    <button class="social-btn facebook" data-social="facebook" aria-label="Compartilhar no Facebook">
+                    <button class="social-btn facebook" data-social="facebook" aria-label="Compartilhar no Facebook" data-tooltip="Compartilhar no Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg>
                     </button>
-                    <button class="social-btn twitter" data-social="twitter" aria-label="Compartilhar no Twitter/X">
+                    <button class="social-btn twitter" data-social="twitter" aria-label="Compartilhar no Twitter/X" data-tooltip="Compartilhar no Twitter/X">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path></svg>
                     </button>
-                    <button class="social-btn whatsapp" data-social="whatsapp" aria-label="Compartilhar no WhatsApp">
+                    <button class="social-btn whatsapp" data-social="whatsapp" aria-label="Compartilhar no WhatsApp" data-tooltip="Compartilhar no WhatsApp">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"></path></svg>
                     </button>
-                    <button class="social-btn telegram" data-social="telegram" aria-label="Compartilhar no Telegram">
+                    <button class="social-btn telegram" data-social="telegram" aria-label="Compartilhar no Telegram" data-tooltip="Compartilhar no Telegram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M228.88,26.19a9,9,0,0,0-9.16-1.57L17.06,103.93a14.22,14.22,0,0,0,2.43,27.21L72,141.45V200a15.92,15.92,0,0,0,10,14.83,15.91,15.91,0,0,0,17.51-3.73l25.32-26.26L165,220a15.88,15.88,0,0,0,10.51,4,16.3,16.3,0,0,0,5-.79,15.85,15.85,0,0,0,10.67-11.63L231.77,35A9,9,0,0,0,228.88,26.19Zm-61.14,36L89.31,126.71l-49.61-11Zm0,0"></path></svg>
                     </button>
                 </div>
@@ -75,13 +76,13 @@
                 <div class="copy-section">
                     <p class="copy-label">Copiar link para:</p>
                     <div class="copy-grid">
-                        <button class="social-btn instagram" data-copy="instagram" aria-label="Copiar link para Instagram">
+                        <button class="social-btn instagram" data-copy="instagram" aria-label="Copiar link para Instagram" data-tooltip="Copiar link para Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
                         </button>
-                        <button class="social-btn tiktok" data-copy="tiktok" aria-label="Copiar link para TikTok">
+                        <button class="social-btn tiktok" data-copy="tiktok" aria-label="Copiar link para TikTok" data-tooltip="Copiar link para TikTok">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M224,72a48.05,48.05,0,0,1-48-48,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V156a20,20,0,1,1-28.57-18.08A8,8,0,0,0,96,130.69V88a8,8,0,0,0-9.4-7.88C50.91,86.48,24,119.1,24,156a76,76,0,1,0,152,0V116.29A103.25,103.25,0,0,0,224,128a8,8,0,0,0,8-8V80A8,8,0,0,0,224,72Zm-8,39.64a87.19,87.19,0,0,1-43.33-16.15A8,8,0,0,0,160,102v54a60,60,0,1,1-88.56-52.64V118.4A36,36,0,1,0,136,156V32h24.5A64.14,64.14,0,0,0,216,87.5Z"></path></svg>
                         </button>
-                        <button class="social-btn copy" data-copy="link" aria-label="Copiar link">
+                        <button class="social-btn copy" data-copy="link" aria-label="Copiar link" data-tooltip="Copiar link para a área de transferência">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"></path></svg>
                         </button>
                     </div>
@@ -89,10 +90,14 @@
             </div>
         </div>
         
-        <button id="share-btn" class="share-btn" aria-label="Compartilhar este mapa">
+        <button id="share-btn" class="share-btn" aria-label="Compartilhar este mapa" data-tooltip="Abrir opções de compartilhamento">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256"><path d="M229.66,109.66l-48,48a8,8,0,0,1-11.32-11.32L204.69,112H165a88,88,0,0,0-85.23,66,8,8,0,0,1-15.5-4A103.94,103.94,0,0,1,165,96h39.71L170.34,61.66a8,8,0,0,1,11.32-11.32l48,48A8,8,0,0,1,229.66,109.66ZM192,208H40V88a8,8,0,0,0-16,0V208a16,16,0,0,0,16,16H192a8,8,0,0,0,0-16Z"></path></svg>
         </button>
     </div>
+
+    <a id="contribute-btn" href="https://github.com/marco-jardim/mapa-de-refeicoes-rj/issues/new" target="_blank" rel="noopener noreferrer" aria-label="Sugerir um novo local de refeição solidária" data-tooltip="Sugerir novo local solidário">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256"><path d="M224,48H192V32a16,16,0,0,0-32,0V48H96V32A16,16,0,0,0,64,32V48H32A16,16,0,0,0,16,64V208a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,160H32V112H224Zm0-128H32V64H64V80a16,16,0,0,0,32,0V64h64V80a16,16,0,0,0,32,0V64h32Z"></path><path d="M160,168H136v24a8,8,0,0,1-16,0V168H96a8,8,0,0,1,0-16h24V128a8,8,0,0,1,16,0v24h24a8,8,0,0,1,0,16Z"></path></svg>
+    </a>
 
     <div id="toast-container"></div>
 

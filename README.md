@@ -17,67 +17,25 @@ Este projeto é uma página web interativa que mostra locais que oferecem **refe
 - Em **celulares**: utiliza a *Web Share API* para abrir o menu nativo de compartilhamento (permitindo enviar pelo WhatsApp, Instagram, Facebook, etc.)
 - Em **computadores**: oferece botões diretos para Facebook, Twitter/X, WhatsApp, Telegram, além de opções para copiar o link para Instagram e TikTok
 - Feedback visual confirmando ações de compartilhamento
+- **Tooltips contextuais** que descrevem cada ícone no hover (desktop) ou em toque/tap (mobile)
+
+### Contribuição Rápida
+- Ícone fixo de contribuição no canto do mapa abre o formulário de issue no GitHub para sugerir novos locais solidários
+- O tooltip do atalho explica a ação antes de abrir o GitHub, ajudando quem está em dispositivos móveis
 
 ### Design Responsivo e Acessível
 - Interface responsiva que funciona perfeitamente em smartphones e desktops
 - Uso de emojis e ícones para facilitar a compreensão
 - Cores quentes e acolhedoras que transmitem solidariedade
 - Texto claro e legível, acessível para pessoas com diferentes níveis de alfabetização
+- **Favicon customizado** com ícone de tigela de comida quente representando a solidariedade alimentar
 
 ## 🚀 Como usar
 
 Basta abrir o arquivo `index.html` em qualquer navegador web moderno. Não requer instalação de dependências ou servidor web.
 
-Para servir localmente com um servidor HTTP simples:
-
-```bash
-# Usando Python 3
-python -m http.server 5000
-
-# Usando Node.js (http-server)
-npx http-server -p 5000
-
-# Ou apenas abra o arquivo diretamente no navegador
-```
-
-## 📍 Locais Mapeados
-
-1. **🍛 Cozinha Solidária da Lapa (MTST)**
-   - 📌 Av. Mem de Sá, 25 – Lapa
-   - 🕐 Almoço, doações 11h–18h
-   - 📅 Todos os dias (inclui fins de semana e feriados)
-
-2. **🥣 Reviver Obras Sociais**
-   - 📌 Rua Riachuelo, 19 – Lapa
-   - 🕐 Noite (~20h)
-   - 📅 Sábados e feriados conforme demanda
-
-3. **🍽 Refettorio Gastromotiva**
-   - 📌 Rua da Lapa, 108 – Lapa
-   - 🕐 Almoço 11h30–15h / jantar social
-   - 📅 Segunda a sexta (não abre fds/feriado)
-
-4. **🥣 Projeto VOAR**
-   - 📌 Praça Nossa Senhora da Glória – Glória
-   - 🕐 Café da manhã por volta das 8h
-   - 📅 Segunda, quarta e quinta-feiras
-
-5. **🍲 Tenda Franciscana (SEFRAS)**
-   - 📌 Largo da Carioca – Centro
-   - 🕐 Almoço aproximadamente 12h–13h
-   - 📅 Dias úteis (segunda a sexta)
-
-6. **🙏 Fraternidade na Rua (Fraternidade sem Fronteiras)**
-   - 📌 Rua do Senado, 50 – Lapa
-   - 🕐 Almoço por volta das 11h
-   - 📅 Segunda a sexta-feira
-
-> ⚠️ **Observação**: Os horários podem variar conforme disponibilidade de voluntários e doações. Recomendamos confirmar diretamente com os responsáveis locais.
-
-## 🚀 Como Usar
-
 ### Acessar Online
-A página está hospedada e pode ser acessada diretamente pelo navegador. Basta abrir o link e começar a explorar o mapa!
+A página está hospedada no GitHub Pages, o que significa que você pode acessá-la diretamente pelo navegador. Basta abrir [este link](https://marco-jardim.github.io/mapa-de-refeicoes-rj/) e começar a explorar o mapa!
 
 ### Navegar no Mapa
 - **No celular**: Use os dedos para arrastar o mapa e gesto de pinça para dar zoom
@@ -109,27 +67,11 @@ A página está hospedada e pode ser acessada diretamente pelo navegador. Basta 
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/mapa-solidario.git
-cd mapa-solidario
+git clone https://github.com/marco-jardim/mapa-de-refeicoes-rj.git
+cd mapa-de-refeicoes-rj
 ```
 
 2. Abra o arquivo `index.html` diretamente no navegador!
-
-Ou use um servidor local (opcional):
-
-**Opção 1 - Servidor Python:**
-```bash
-python -m http.server 5000
-```
-
-**Opção 2 - Servidor Node:**
-```bash
-npx http-server -p 5000
-```
-
-**Opção 3 - Live Server (VS Code):**
-- Instale a extensão "Live Server"
-- Clique com o botão direito em `index.html` e selecione "Open with Live Server"
 
 ### Estrutura de Arquivos
 
@@ -140,7 +82,6 @@ mapa-solidario/
 ├── app.js           # Lógica JavaScript (vanilla)
 ├── package.json     # Metadados do projeto
 ├── README.md        # Esta documentação
-├── PRD.md           # Documento de Requisitos do Produto
 ├── SECURITY.md      # Política de Segurança
 └── LICENSE          # Licença MIT
 ```
@@ -162,6 +103,8 @@ Se você conhece outros pontos de distribuição de refeições:
    - Coordenadas (latitude e longitude)
 4. Teste localmente para garantir que o marcador aparece corretamente
 5. Abra um **Pull Request** com uma descrição clara
+
+> 💡 Também é possível clicar no novo ícone flutuante "contribuir" dentro do próprio mapa para abrir uma issue de sugestão diretamente no GitHub.
 
 ### Atualizar Informações
 Se alguma informação estiver desatualizada:
@@ -198,12 +141,15 @@ Este projeto é uma humilde contribuição para ampliar o alcance de informaçõ
 
 ### Organizações Sociais
 Às organizações que realizam o verdadeiro trabalho de solidariedade na rua:
-- **MTST** - Movimento dos Trabalhadores Sem Teto
 - **Gastromotiva** - Instituto Gastromotiva
 - **SEFRAS** - Serviço Franciscano de Solidariedade
 - **Fraternidade sem Fronteiras**
 - **Reviver Obras Sociais**
 - **Projeto VOAR**
+- **Café da Manhã Solidário do Hely (Peruquinha)**
+- **Ação da Cidadania** - Pelo combate à fome e à miséria
+- **Missionárias da Caridade Lapa**
+- **Movimento Nacional de População de Rua do Rio de Janeiro - MNPR/RJ**
 
 ### Comunidade Open Source
 - **OpenStreetMap** - Pela disponibilização de dados cartográficos abertos

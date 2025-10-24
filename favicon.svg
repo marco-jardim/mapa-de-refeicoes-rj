@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#9BA882" rx="64"/>
+  <g fill="#ffffff">
+    <!-- Prato/tigela -->
+    <ellipse cx="128" cy="140" rx="70" ry="20" opacity="0.3"/>
+    <path d="M58 140 Q58 100 128 100 Q198 100 198 140 L198 160 Q198 180 128 180 Q58 180 58 160 Z"/>
+    
+    <!-- Vapor/calor (3 linhas onduladas) -->
+    <path d="M90 75 Q95 65 100 75 Q105 85 110 75" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+    <path d="M118 70 Q123 60 128 70 Q133 80 138 70" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+    <path d="M146 75 Q151 65 156 75 Q161 85 166 75" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>
