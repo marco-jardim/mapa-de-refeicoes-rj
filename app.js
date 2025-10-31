@@ -163,7 +163,242 @@ const foodLocations = [
     ],
     "lat": -22.931285,
     "lng": -43.180438
+  },
+  {
+    "name": "⛪ Jantar solidário na Candelária",
+    "address": "📌 Praça Pio X, s/n - Centro",
+    "hours": "🕐 Jantar, 19h",
+    "days": "📅 Sábado",
+    "daysOfWeek": [
+      "sab"
+    ],
+    "lat": -22.901039,
+    "lng": -43.178201,
+  },
+  {
+    "name": "Projeto RUAS",
+    "address": "📌 Praça Serzedelo Correia, em frente à igreja - Copacabana",
+    "hours": "🕐 Noite, 20h–22h30",
+    "days": "📅 Terça-feira",
+    "daysOfWeek": [
+      "ter"
+    ],
+    "lat": -22.968917,
+    "lng": -43.183490
+  },
+  {
+    "name": "🍝 Macarrão na Gonzaga Bastos",
+    "address": "📌 Rua Gonzaga Bastos, 296 – Vila Isabel",
+    "hours": "🕐 Manhã, 9h30",
+    "days": "📅 Domingo",
+    "daysOfWeek": [
+      "dom"
+    ],
+    "lat": -22.918034,
+    "lng": -43.241500
+  },
+  {
+    "name": "Projeto Só Vamos",
+    "address": "📌 Rua Moncorvo Filho, 71 – Centro",
+    "hours": "🕐 Almoço, 12h",
+    "days": "📅 Sábado",
+    "daysOfWeek": [
+      "sab"
+    ],
+    "lat": -22.909085,
+    "lng": -43.191850
+  },
+  {
+    "name": "021 Nossas Histórias",
+    "address": "📌 República do Paraguai, Centro – Rio de Janeiro – RJ",
+    "hours": "🕐 Café da manhã, 7h30",
+    "days": "📅 Segundo domingo do mês",
+    "daysOfWeek": ["dom"],
+    "lat": -22.910672,
+    "lng": -43.1796819
+  },
+  {
+    "name": "Casa de Passagem",
+    "address": "📌 Estrada Velha do Pilar, Figueira – Duque de Caxias – RJ",
+    "hours": "🕐 24h",
+    "days": "📅 Todos os dias",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex", "sab", "dom"],
+    "lat": -22.64509,
+    "lng": -43.31188
+  },
+  {
+    "name": "Centro de Estudos Espíritas Allan Kardec",
+    "address": "📌 Rua Duarte Teixeira 195 – Quintino Bocaiúva – Rio de Janeiro – RJ",
+    "hours": "🕐 7h às 9h",
+    "days": "📅 Sábado",
+    "daysOfWeek": ["sab"],
+    "lat": -22.89046,
+    "lng": -43.32256
+  },
+  {
+    "name": "Centro de Referência Especializado para População de Rua (Duque de Caxias)",
+    "address": "📌 Estrada Velha do Pilar s/n – Figueira – Duque de Caxias – RJ",
+    "hours": "🕐 24h",
+    "days": "📅 Todos os dias",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex", "sab", "dom"],
+    "lat": -22.64509,
+    "lng": -43.31188
+  },
+  {
+    "name": "Centro de Referência Especializado para População em Situação de Rua (Duque de Caxias)",
+    "address": "📌 Estrada Velha do Pilar s/n – Figueira – Duque de Caxias – RJ",
+    "hours": "🕐 8h às 17h",
+    "days": "📅 Segunda a sexta-feira",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex"],
+    "lat": -22.64509,
+    "lng": -43.31188
+  },
+  {
+    "name": "Centro de Referência Especializado para População em Situação de Rua (Maricá)",
+    "address": "📌 Rua João Batista Deminicis 95, quadra 94 lote 80 – Jardim Miramar – Maricá – RJ",
+    "hours": "🕐 8h às 17h",
+    "days": "📅 Segunda a sexta-feira",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex"],
+    "lat": -22.92906,
+    "lng": -42.81472
+  },
+  {
+    "name": "Centro POP Araruama",
+    "address": "📌 Travessa Carmelita de Oliveira 03 – Centro – Araruama – RJ",
+    "hours": "🕐 8h às 17h",
+    "days": "📅 Segunda a sexta-feira",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex"],
+    "lat": -22.87107,
+    "lng": -42.33692
+  },
+  {
+    "name": "Comunidade Olhar Misericordioso",
+    "address": "📌 Vale da Misericórdia Boca do Leão – Resende – RJ",
+    "hours": "🕐 Período integral",
+    "days": "📅 Todos os dias",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex", "sab", "dom"],
+    "lat": -22.47697,
+    "lng": -44.44809
+  },
+  {
+    "name": "Comunidade Projeto Amigos da Rua Resende",
+    "address": "📌 Rua 3 nº 31 – Toyota I – Resende – RJ",
+    "hours": "🕐 Sem horário fixo",
+    "days": "📅 Domingo ou segunda-feira",
+    "daysOfWeek": ["dom", "seg"],
+    "lat": -22.47525,
+    "lng": -44.5016
+  },
+  {
+    "name": "Centro de Referência Especializado de Assistência Social (Piraí)",
+    "address": "📌 Rua Bulhões de Carvalho 233 – Casa Amarela – Piraí – RJ",
+    "hours": "🕐 8h às 17h",
+    "days": "📅 Segunda a sexta-feira",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex"],
+    "lat": -22.62917,
+    "lng": -43.89806
+  },
+  {
+    "name": "CREAS de Quatis",
+    "address": "📌 Rua Professora Ana Ferreira de Oliveira 47 – Bondarovsky – Quatis – RJ",
+    "hours": "🕐 8h às 17h",
+    "days": "📅 Segunda a sexta-feira",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex"],
+    "lat": -22.41533,
+    "lng": -44.26048
+  },
+  {
+    "name": "Fraternidade Sem Fronteiras",
+    "address": "📌 Rua do Senado 50 – Centro – Rio de Janeiro – RJ",
+    "hours": "🕐 Sem horário fixo",
+    "days": "📅 Todos os dias",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex", "sab", "dom"],
+    "lat": -22.91001,
+    "lng": -43.18726
+  },
+  {
+    "name": "Igreja Presbiteriana do Grajaú nas Ruas",
+    "address": "📌 Rua Nossa Senhora de Lourdes 20, casa 4 – Grajaú – Rio de Janeiro – RJ",
+    "hours": "🕐 Horário de almoço",
+    "days": "📅 Quarta-feira",
+    "daysOfWeek": ["qua"],
+    "lat": -22.91290,
+    "lng": -43.20030
+  },
+  {
+    "name": "Novo Rumo Obras Sociais",
+    "address": "📌 Rua Getúlio 14 – Todos os Santos – Rio de Janeiro – RJ",
+    "hours": "🕐 10h às 16h30 (fevereiro a dezembro)",
+    "days": "📅 Segunda a sexta-feira",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex"],
+    "lat": -22.89339,
+    "lng": -43.27906
+  },
+  {
+    "name": "Paróquia Nossa Senhora da Conceição",
+    "address": "📌 Praça Doutor Oliveira Botelho s/n – Centro – Resende – RJ",
+    "hours": "🕐 14h às 17h",
+    "days": "📅 Segunda a sexta-feira",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex"],
+    "lat": -22.47859,
+    "lng": -44.45401
+  },
+  {
+    "name": "Paróquia Nossa Senhora de Fátima",
+    "address": "📌 Rua Cantídio Jesuíno da Costa 105 – Paraíso – Resende – RJ",
+    "hours": "🕐 9h às 17h",
+    "days": "📅 Segunda a sábado",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex", "sab"],
+    "lat": -22.47050,
+    "lng": -44.45090
+  },
+  {
+    "name": "Pastoral de Pessoa em Situação de Rua",
+    "address": "📌 Paróquia Sagrada Família s/n – Cidade Alegria e Itapuca – Resende – RJ",
+    "hours": "🕐 Sem horário fixo",
+    "days": "📅 3º sábado do mês",
+    "daysOfWeek": ["sab"],
+    "lat": -22.48157,
+    "lng": -44.49068
+  },
+  {
+    "name": "Projeto Gramachinhos",
+    "address": "📌 Rua Tocantins 11 – Jardim Gramacho – Duque de Caxias – RJ",
+    "hours": "🕐 Sem horário fixo",
+    "days": "📅 Todos os dias",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex", "sab", "dom"],
+    "lat": -22.75256,
+    "lng": -43.28969
+  },
+  {
+    "name": "Projeto Prato Feito Carioca 1",
+    "address": "📌 Rua Visconde de Niterói 1072 – Quadra da Mangueira – Rio de Janeiro – RJ",
+    "hours": "🕐 Sem horário fixo",
+    "days": "📅 Todos os dias",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex", "sab", "dom"],
+    "lat": -22.90338,
+    "lng": -43.24085
+  },
+  {
+    "name": "Secretaria de Assistência Social e Direitos Humanos",
+    "address": "📌 Rua Coronel Abílio Godoy 127, 2º andar – Paraíso – Resende – RJ",
+    "hours": "🕐 8h às 17h",
+    "days": "📅 Segunda a sexta-feira",
+    "daysOfWeek": ["seg", "ter", "qua", "qui", "sex"],
+    "lat": -22.45577,
+    "lng": -44.43618
+  },
+  {
+    "name": "SÓ VAMOS RJ",
+    "address": "📌 Rua do Matoso 22 – Praça da Bandeira – Rio de Janeiro – RJ",
+    "hours": "🕐 Sem horário fixo",
+    "days": "📅 Sábado e domingo",
+    "daysOfWeek": ["sab", "dom"],
+    "lat": -22.91255,
+    "lng": -43.21332
   }
+  
+
 ];
 
 // Variáveis globais
