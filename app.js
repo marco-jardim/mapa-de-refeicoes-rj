@@ -396,8 +396,25 @@ const foodLocations = [
     "daysOfWeek": ["sab", "dom"],
     "lat": -22.91255,
     "lng": -43.21332
+  },
+  {
+    "name": "Projeto Servir",
+    "address": "📌 Praça Seans Pena – Rio de Janeiro – RJ",
+    "hours": "🕐 7h",
+    "days": "📅 Sábado",
+    "daysOfWeek": ["sab"],
+    "lat": -22.924586, 
+    "lng": -43.232349
+  },
+  {
+    "name": "Projeto Servir",
+    "address": "📌 Em frente ao Castelinho do Flamengo – Rio de Janeiro – RJ",
+    "hours": "🕐 8h",
+    "days": "📅 Sábado",
+    "daysOfWeek": ["sab"],
+    "lat": -22.930019,
+    "lng": -43.173957
   }
-  
 
 ];
 
